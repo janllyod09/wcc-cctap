@@ -1,0 +1,159 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  margin-top: 130px;
+  margin-bottom: 30px;
+  min-height: 100vh;
+  align-items: center;
+  background: #3498DB;
+  justify-content: center;
+}
+.header{
+    position: absolute;
+    top: 0px;
+    height: 100px;
+    width: 100%;
+    background-color: #2174ac;
+    padding-top: 15px;
+}
+.header img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+  }
+.wrapper{
+  margin: auto;
+  height: auto;
+  max-width: 410px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 20px 25px 0;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+}
+.wrapper.active{
+  height: auto;
+}
+header h1{
+  font-size: 21px;
+  font-weight: 500;
+}
+header p{
+  margin-top: 5px;
+  color: #575757;
+  font-size: 16px;
+}
+.wrapper .form{
+  margin: 20px 0 25px;
+}
+.form :where(input, button){
+  width: 100%;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.1s ease;
+}
+
+.form label{
+    font-size: 11px;
+    padding-left: 4px;
+}
+
+.form select{
+    width: 100%;
+    height: 35px;
+    border: 1px solid #8f8f8f;
+    padding-left: 15px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: 0.1s ease;
+  }
+
+.form section option{
+  width: auto;
+}
+
+.form input{
+  font-size: 14px;
+  margin-bottom: 5px;
+  padding: 0 17px;
+  border: 1px solid #999;
+}
+
+.form input:focus{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.form input::placeholder{
+  color: #999;
+}
+.form button{
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  background: #3498DB;
+}
+.qr-code{
+  opacity: 0;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 5px;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+.wrapper.active .qr-code{
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.qr-code img{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+.qr-code button{
+  width: 100%;
+  height: 35px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border: none;
+  background: #3498DB;
+}
+
+@media (max-width: 430px){
+  .wrapper{
+    height: auto;
+    margin: 10px;
+    padding: 16px 20px;
+  }
+  .wrapper.active{
+    height: auto;
+  }
+  header p{
+    color: #696969;
+  }
+  .form :where(input, button, select){
+    height: 35px;
+  }
+  .qr-code img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+  }  
+}
